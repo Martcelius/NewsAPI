@@ -62,7 +62,7 @@ class NewsController extends Controller
 
         $news = News::paginate(15);
         $response = [
-            'status' => '200',
+            'status' => 200,
             'msg' => 'List of all News',
             'data' => NewsCollection::collection($news),
         ];
