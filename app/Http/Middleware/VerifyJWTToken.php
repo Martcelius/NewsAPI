@@ -26,9 +26,12 @@ class VerifyJWTToken
             } elseif ($e instanceof \Tymon\JWTAuth\Exceptions\TokenInvalidException) {
                 return response()->json(['token_invalid'], $e->getStatusCode());
             } else {
-                return response()->json(['error' => 'Token is required']);
-            }
-        }
+                return response()->json([
+                    'status' => 401,
+                    'msg' => 'Token is required'
+                ], 401);
+            };
+        };
         return $next($request);
     }
 }

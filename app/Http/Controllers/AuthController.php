@@ -59,14 +59,14 @@ class AuthController extends Controller
                 'token' => $token
             ];
 
-            return Response($response, 201);
+            return response()->json($response, 201);
         } else {
 
             $response = [
                 'msg' => "error occured"
             ];
 
-            return Response($response, 404);
+            return response()->json($response, 404);
         };
     }
 
@@ -101,11 +101,11 @@ class AuthController extends Controller
             }
 
             $response = [
+                'status' => 200,
                 'msg' => 'User signin',
-                'user' => $user,
                 'token' => $token
             ];
-            return response()->json($response, 201);
+            return response()->json($response, 200);
         }
 
         $response = [

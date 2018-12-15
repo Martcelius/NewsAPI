@@ -24,7 +24,7 @@ class NewsController extends Controller
         if ($status && !$topic) {
             $news = News::where('status', $status)->paginate(15);
             $response = [
-                'status' => '200',
+                'status' => 200,
                 'msg' => 'List of all News by status : ' . $status,
                 'data' => NewsCollection::collection($news)
             ];
@@ -35,7 +35,7 @@ class NewsController extends Controller
 
             if (!$topic) {
                 $response = [
-                    'status' => '404',
+                    'status' => 404,
                     'msg' => 'Topic not found',
                 ];
                 return response()->json($response, 404);
@@ -43,7 +43,7 @@ class NewsController extends Controller
             $topics = $topic->news()->paginate(15);
             // return $topic;
             $response = [
-                'status' => '200',
+                'status' => 200,
                 'msg' => 'List of all News from topic : ' . $topic->topic,
                 'data' => NewsCollection::collection($topics),
             ];
@@ -53,7 +53,7 @@ class NewsController extends Controller
             $topic = Topic::where('topic', $topic)->first();
             $news = $topic->news()->where('status', $status)->paginate(15);
             $response = [
-                'status' => '200',
+                'status' => 200,
                 'msg' => 'List of all News from topic : ' . $topic->topic . ' and status :' . $status,
                 'data' => NewsCollection::collection($news),
             ];
@@ -92,7 +92,7 @@ class NewsController extends Controller
 
         if (!$news->save()) {
             $response = [
-                'status' => '404',
+                'status' => 400,
                 'msg' => 'Failed to create News',
             ];
 
@@ -104,7 +104,7 @@ class NewsController extends Controller
         };
 
         $response = [
-            'status' => '201',
+            'status' => 201,
             'msg' => 'Success to create News',
             'data' => new NewsCollection($news)
         ];
@@ -117,7 +117,7 @@ class NewsController extends Controller
         $news = News::find($news_id);
         if (!$news) {
             $response = [
-                'status' => '404',
+                'status' => 404,
                 'msg' => 'Detail news not found',
             ];
             return response()->json($response, 404);
@@ -125,7 +125,7 @@ class NewsController extends Controller
         };
 
         $response = [
-            'status' => '200',
+            'status' => 200,
             'msg' => 'List of detail News',
             'data' => new NewsResource($news),
         ];
@@ -149,7 +149,7 @@ class NewsController extends Controller
 
         if (!$news) {
             $response = [
-                'status' => '404',
+                'status' => 404,
                 'msg' => 'News can not founds'
             ];
             return response()->json($response, 404);
@@ -163,7 +163,7 @@ class NewsController extends Controller
 
         if (!$news->update()) {
             $response = [
-                'status' => '400',
+                'status' => 400,
                 'msg' => 'Failed to update News',
             ];
             return response()->json($response, 400);
@@ -175,7 +175,7 @@ class NewsController extends Controller
         };
 
         $response = [
-            'status' => '201',
+            'status' => 201,
             'msg' => 'Success to update News',
             'data' => new NewsCollection($news)
         ];
@@ -188,7 +188,7 @@ class NewsController extends Controller
         $news = News::find($news_id);
         if (!$news) {
             $response = [
-                'status' => '404',
+                'status' => 404,
                 'msg' => 'News not found'
             ];
             return response()->json($response, 404);
@@ -201,14 +201,14 @@ class NewsController extends Controller
                 $news->topics()->attach($topic);
             };
             $response = [
-                'status' => '400',
+                'status' => 400,
                 'msg' => 'Failed to delete News'
             ];
             return response()->json($response, 400);
         };
 
         $response = [
-            'status' => '200',
+            'status' => 200,
             'msg' => 'News deleted',
             'create' => [
                 'href' => '/api/v1/news',
