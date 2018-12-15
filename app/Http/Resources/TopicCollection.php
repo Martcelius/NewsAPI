@@ -18,7 +18,7 @@ class TopicCollection extends Resource
             'id' => $this->id,
             'topic' => $this->topic,
             'detailTopic' => [
-                'href' => '/api/v1/topic/' . $this->id,
+                'href' => '/api/v1/topics/' . $this->id,
                 'method' => 'GET'
             ],
         ];
