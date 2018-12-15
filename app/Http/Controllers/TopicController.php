@@ -26,7 +26,7 @@ class TopicController extends Controller
      * @apiDescription Digunakan untuk mendapatkan list dari semua topic.
      *
      * @apiExample Contoh untuk menampilkan semua topic:
-     * https://apikumparan.herokuapp.com/api/v1/topics
+     * http://localhost:8000/api/v1/topics
      *  
      */
 
@@ -40,7 +40,7 @@ class TopicController extends Controller
      * @apiDescription Digunakan untuk mendapatkan list dari topic yang diinginkan.
      *
      * @apiExample Contoh untuk menampilkan detail topic:
-     * https://apikumparan.herokuapp.com/api/v1/topics/1
+     * http://localhost:8000/api/v1/topics/1
      * @apiParam {number} id id dari topic yang diinginkan
      *  
      */
@@ -55,7 +55,7 @@ class TopicController extends Controller
      * @apiDescription Digunakan untuk post topic yang diinginkan.
      *
      * @apiExample Contoh untuk post topic baru:
-     * https://apikumparan.herokuapp.com/api/v1/topics
+     * http://localhost:8000/api/v1/topics
      * @apiParam {string} topic topic baru yang diinginkan.
      *  
      */
@@ -70,7 +70,7 @@ class TopicController extends Controller
      * @apiDescription Digunakan untuk delete topic yang diinginkan.
      *
      * @apiExample Contoh untuk delete topic:
-     * https://apikumparan.herokuapp.com/api/v1/topics/1
+     * http://localhost:8000/api/v1/topics/1
      * @apiParam {number} id id topic yang ingin di delete.
      *  
      */

@@ -27,16 +27,16 @@ class NewsController extends Controller
      * @apiDescription Digunakan untuk mendapatkan list dari news yang diinginkan.
      *
      * @apiExample Contoh untuk menampilkan semua news:
-     * https://apikumparan.herokuapp.com/api/v1/news
+     * http://localhost:8000/api/v1/news
      * 
      * @apiExample Contoh untuk menampilkan semua news berdasarkan filter status : {draft, publish, deleted}:
-     * https://apikumparan.herokuapp.com/api/v1/news?status=draft
+     * http://localhost:8000/api/v1/news?status=draft
      * 
      * @apiExample Contoh untuk menampilkan semua news berdasarkan filter topic 
-     * https://apikumparan.herokuapp.com/api/v1/news?topic=politik
+     * http://localhost:8000/api/v1/news?topic=politik
      * 
      * @apiExample Contoh untuk menampilkan semua news berdasarkan filter topic dan status:
-     * https://apikumparan.herokuapp.com/api/v1/news?topic=politik&status=draft
+     * http://localhost:8000/api/v1/news?topic=politik&status=draft
      * 
      * @apiParam {string} status status yang terdapat pada masing-masing news (draft, publish, deleted)
      * @apiParam {string} topic topik sesuai yang disimpan di record topik
@@ -52,7 +52,7 @@ class NewsController extends Controller
      * @apiDescription Digunakan untuk post data News baru.
      *
      * @apiExample Contoh untuk post data News baru:
-     * https://apikumparan.herokuapp.com/api/v1/news
+     * http://localhost:8000/api/v1/news
      * 
      * @apiParam {string} penulis nama penulis(Required)
      * @apiParam {string} title judul dari news baru(Required)
@@ -73,7 +73,7 @@ class NewsController extends Controller
      * @apiDescription Digunakan untuk get detail News.
      *
      * @apiExample Contoh untuk get detail News:
-     * https://apikumparan.herokuapp.com/api/v1/news/1
+     * http://localhost:8000/api/v1/news/1
      * @apiParam {number} id id dari suatu news yang dicari
      */
 
@@ -87,7 +87,7 @@ class NewsController extends Controller
      * @apiDescription Digunakan untuk update data News.
      *
      * @apiExample Contoh untuk update data News:
-     * https://apikumparan.herokuapp.com/api/v1/news/1
+     * http://localhost:8000/api/v1/news/1
      * 
      * @apiParam {string} penulis nama penulis(Required)
      * @apiParam {string} title judul dari news (Required)
@@ -108,7 +108,7 @@ class NewsController extends Controller
      * @apiDescription Digunakan untuk delete News.
      *
      * @apiExample Contoh untuk delete data News:
-     * https://apikumparan.herokuapp.com/api/v1/news/1
+     * http://localhost:8000/api/v1/news/1
      * @apiParam {number} id id news yang ingin di delete
      */
 

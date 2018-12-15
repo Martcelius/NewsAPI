@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://apikumparan.herokuapp.com/apidoc/" target="_blank"><strong>Documentation API</strong></a>
+                    <a href="http://localhost:8000/apidoc/" target="_blank"><strong>Documentation API</strong></a>
                     <a href="https://github.com/Martcelius/NewsAPI" target="_blank"><strong>My Github For API</strong></a>
                 </div>
             </div>
