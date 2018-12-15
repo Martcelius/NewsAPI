@@ -20,7 +20,7 @@ class AuthController extends Controller
      * @apiDescription Digunakan untuk register user dan akan generate token untuk akses endpoint dengan permission:auth.
      *
      * @apiExample Contoh untuk register user:
-     * http://localhost:8000/api/v1/user/register
+     * https://apikumparan.herokuapp.com/api/v1/user/register
      * 
      * @apiParam {string} name nama dari user baru
      * @apiParam {string} email email dari user baru
@@ -37,7 +37,7 @@ class AuthController extends Controller
      * @apiDescription Digunakan untuk signin user dan akan generate token untuk akses endpoint dengan permission:auth.
      *
      * @apiExample Contoh untuk signin user:
-     * http://localhost:8000/api/v1/user/signin
+     * https://apikumparan.herokuapp.com/api/v1/user/signin
      * 
      * @apiParam {string} email email dari user 
      * @apiParam {varchar} password password dari user 
