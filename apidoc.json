@@ -1,5 +1,5 @@
 {
-    "name": "Dokumentasi API News ",
+    "name": "Dokumentasi API News Topic Management ",
     "version": "0.1.0",
     "description": "Test kumparan (Backend Technical Assessment). Untuk beberapa endpoint diharuskan melakukan login atau register untuk mendapatkan permission (JWTAuth Token)",
     "apidoc": {

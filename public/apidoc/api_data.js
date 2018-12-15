@@ -15,7 +15,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk delete data News:",
-        "content": "http://localhost:8000/api/v1/news/1",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news/1",
         "type": "json"
       }
     ],
@@ -51,22 +51,22 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk menampilkan semua news:",
-        "content": "http://localhost:8000/api/v1/news",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news",
         "type": "json"
       },
       {
         "title": "Contoh untuk menampilkan semua news berdasarkan filter status : {draft, publish, deleted}:",
-        "content": "http://localhost:8000/api/v1/news?status=draft",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news?status=draft",
         "type": "json"
       },
       {
         "title": "Contoh untuk menampilkan semua news berdasarkan filter topic ",
-        "content": "http://localhost:8000/api/v1/news?topic=politik",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news?topic=politik",
         "type": "json"
       },
       {
         "title": "Contoh untuk menampilkan semua news berdasarkan filter topic dan status:",
-        "content": "http://localhost:8000/api/v1/news?topic=politik&status=draft",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news?topic=politik&status=draft",
         "type": "json"
       }
     ],
@@ -109,7 +109,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk get detail News:",
-        "content": "http://localhost:8000/api/v1/news/1",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news/1",
         "type": "json"
       }
     ],
@@ -145,7 +145,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk post data News baru:",
-        "content": "http://localhost:8000/api/v1/news",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news",
         "type": "json"
       }
     ],
@@ -216,7 +216,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk update data News:",
-        "content": "http://localhost:8000/api/v1/news/1",
+        "content": "https://apikumparan.herokuapp.com/api/v1/news/1",
         "type": "json"
       }
     ],
@@ -287,7 +287,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk delete topic:",
-        "content": "http://localhost:8000/api/v1/topics/1",
+        "content": "https://apikumparan.herokuapp.com/api/v1/topics/1",
         "type": "json"
       }
     ],
@@ -323,7 +323,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk menampilkan semua topic:",
-        "content": "http://localhost:8000/api/v1/topics",
+        "content": "https://apikumparan.herokuapp.com/api/v1/topics",
         "type": "json"
       }
     ],
@@ -346,7 +346,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk menampilkan detail topic:",
-        "content": "http://localhost:8000/api/v1/topics/1",
+        "content": "https://apikumparan.herokuapp.com/api/v1/topics/1",
         "type": "json"
       }
     ],
@@ -382,7 +382,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk post topic baru:",
-        "content": "http://localhost:8000/api/v1/topics",
+        "content": "https://apikumparan.herokuapp.com/api/v1/topics",
         "type": "json"
       }
     ],
@@ -418,7 +418,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk register user:",
-        "content": "http://localhost:8000/api/v1/user/register",
+        "content": "https://apikumparan.herokuapp.com/api/v1/user/register",
         "type": "json"
       }
     ],
@@ -468,7 +468,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Contoh untuk signin user:",
-        "content": "http://localhost:8000/api/v1/user/signin",
+        "content": "https://apikumparan.herokuapp.com/api/v1/user/signin",
         "type": "json"
       }
     ],
