@@ -16,6 +16,65 @@ class TopicController extends Controller
         $this->middleware('jwt.auth', ['except' => ['getTopic', 'showTopic']]);
     }
 
+    /**
+     * @api {get} /api/v1/topics Get all list of Topics
+     * @apiVersion 0.1.0
+     * @apiName getTopic
+     * @apiGroup Topic
+     * @apiPermission public
+     *
+     * @apiDescription Digunakan untuk mendapatkan list dari semua topic.
+     *
+     * @apiExample Contoh untuk menampilkan semua topic:
+     * http://localhost:8000/api/v1/topics
+     *  
+     */
+
+    /**
+     * @api {get} /api/v1/topics/{topic_id} Get detail list of Topics
+     * @apiVersion 0.1.0
+     * @apiName getTopicDetail
+     * @apiGroup Topic
+     * @apiPermission public
+     *
+     * @apiDescription Digunakan untuk mendapatkan list dari topic yang diinginkan.
+     *
+     * @apiExample Contoh untuk menampilkan detail topic:
+     * http://localhost:8000/api/v1/topics/1
+     * @apiParam {number} id id dari topic yang diinginkan
+     *  
+     */
+
+    /**
+     * @api {post} /api/v1/topics Post new Topics
+     * @apiVersion 0.1.0
+     * @apiName postTopic
+     * @apiGroup Topic
+     * @apiPermission auth
+     *
+     * @apiDescription Digunakan untuk post topic yang diinginkan.
+     *
+     * @apiExample Contoh untuk post topic baru:
+     * http://localhost:8000/api/v1/topics
+     * @apiParam {string} topic topic baru yang diinginkan.
+     *  
+     */
+
+    /**
+     * @api {delete} /api/v1/topics/{topic_id} Delete Topics
+     * @apiVersion 0.1.0
+     * @apiName deleteTopic
+     * @apiGroup Topic
+     * @apiPermission auth
+     *
+     * @apiDescription Digunakan untuk delete topic yang diinginkan.
+     *
+     * @apiExample Contoh untuk delete topic:
+     * http://localhost:8000/api/v1/topics/1
+     * @apiParam {number} id id topic yang ingin di delete.
+     *  
+     */
+
     public function getTopic()
     {
         $topics = Topic::paginate(15);

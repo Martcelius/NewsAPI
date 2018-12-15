@@ -10,12 +10,45 @@ use App\User;
 
 class AuthController extends Controller
 {
+    /**
+     * @api {post} /api/v1/user/register Simple register user
+     * @apiVersion 0.1.0
+     * @apiName userRegister
+     * @apiGroup User
+     * @apiPermission public
+     *
+     * @apiDescription Digunakan untuk register user dan akan generate token untuk akses endpoint dengan permission:auth.
+     *
+     * @apiExample Contoh untuk register user:
+     * http://localhost:8000/api/v1/user/register
+     * 
+     * @apiParam {string} name nama dari user baru
+     * @apiParam {string} email email dari user baru
+     * @apiParam {varchar} password password dari user baru
+     */
+
+    /**
+     * @api {post} /api/v1/user/signin Simple signin user
+     * @apiVersion 0.1.0
+     * @apiName userSignin
+     * @apiGroup User
+     * @apiPermission public
+     *
+     * @apiDescription Digunakan untuk signin user dan akan generate token untuk akses endpoint dengan permission:auth.
+     *
+     * @apiExample Contoh untuk signin user:
+     * http://localhost:8000/api/v1/user/signin
+     * 
+     * @apiParam {string} email email dari user 
+     * @apiParam {varchar} password password dari user 
+     */
+
     public function register(Request $request)
     {
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'required|min:5'
+            'password' => 'required'
         ]);
 
         $name = $request->name;
@@ -74,7 +107,7 @@ class AuthController extends Controller
     {
         $this->validate($request, [
             'email' => 'required|email',
-            'password' => 'required|min:5'
+            'password' => 'required'
         ]);
 
         $email = $request->email;

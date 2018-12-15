@@ -1,0 +1,9 @@
+{
+    "name": "Dokumentasi API News ",
+    "version": "0.1.0",
+    "description": "Test kumparan (Backend Technical Assessment). Untuk beberapa endpoint diharuskan melakukan login atau register untuk mendapatkan permission (JWTAuth Token)",
+    "apidoc": {
+        "title": "apikumparan",
+        "url": "http://localhost:8000/api/"
+    }
+}

@@ -17,6 +17,101 @@ class NewsController extends Controller
         $this->middleware('jwt.auth', ['except' => ['getNews', 'showNews']]);
     }
 
+    /**
+     * @api {get} /api/v1/news Get all list of News
+     * @apiVersion 0.1.0
+     * @apiName getNews
+     * @apiGroup News
+     * @apiPermission public
+     *
+     * @apiDescription Digunakan untuk mendapatkan list dari news yang diinginkan.
+     *
+     * @apiExample Contoh untuk menampilkan semua news:
+     * http://localhost:8000/api/v1/news
+     * 
+     * @apiExample Contoh untuk menampilkan semua news berdasarkan filter status : {draft, publish, deleted}:
+     * http://localhost:8000/api/v1/news?status=draft
+     * 
+     * @apiExample Contoh untuk menampilkan semua news berdasarkan filter topic 
+     * http://localhost:8000/api/v1/news?topic=politik
+     * 
+     * @apiExample Contoh untuk menampilkan semua news berdasarkan filter topic dan status:
+     * http://localhost:8000/api/v1/news?topic=politik&status=draft
+     * 
+     * @apiParam {string} status status yang terdapat pada masing-masing news (draft, publish, deleted)
+     * @apiParam {string} topic topik sesuai yang disimpan di record topik
+     */
+
+    /**
+     * @api {post} /api/v1/news Post new News
+     * @apiVersion 0.1.0
+     * @apiName postNews
+     * @apiGroup News
+     * @apiPermission auth
+     *
+     * @apiDescription Digunakan untuk post data News baru.
+     *
+     * @apiExample Contoh untuk post data News baru:
+     * http://localhost:8000/api/v1/news
+     * 
+     * @apiParam {string} penulis nama penulis(Required)
+     * @apiParam {string} title judul dari news baru(Required)
+     * @apiParam {string} body isi dari news baru(Required)
+     * @apiParam {string} thumbnail thumbnail dari news baru(Required)
+     * @apiParam {string} status status dari news baru (draft,publish,deleted)(Required)
+     * @apiParam {Array} topic_id topic dari news berupa topic_id, dapat lebih dari satu value(Required)
+     * 
+     */
+
+    /**
+     * @api {get} /api/v1/news/{news_id} Get detail News
+     * @apiVersion 0.1.0
+     * @apiName getNewsDetail
+     * @apiGroup News
+     * @apiPermission public
+     *
+     * @apiDescription Digunakan untuk get detail News.
+     *
+     * @apiExample Contoh untuk get detail News:
+     * http://localhost:8000/api/v1/news/1
+     * @apiParam {number} id id dari suatu news yang dicari
+     */
+
+    /**
+     * @api {put} /api/v1/news/{news_id} Update News 
+     * @apiVersion 0.1.0
+     * @apiName postNewsUpdate
+     * @apiGroup News
+     * @apiPermission auth
+     *
+     * @apiDescription Digunakan untuk update data News.
+     *
+     * @apiExample Contoh untuk update data News:
+     * http://localhost:8000/api/v1/news/1
+     * 
+     * @apiParam {string} penulis nama penulis(Required)
+     * @apiParam {string} title judul dari news (Required)
+     * @apiParam {string} body isi dari news (Required)
+     * @apiParam {string} thumbnail thumbnail dari news (Required)
+     * @apiParam {string} status status dari news  (draft,publish,deleted)(Required)
+     * @apiParam {Array} topic_id topic dari news berupa topic_id, dapat lebih dari satu value(Required)
+     * 
+     */
+
+    /**
+     * @api {delete} /api/v1/news/{news_id} Delete News
+     * @apiVersion 0.1.0
+     * @apiName deleteNews
+     * @apiGroup News
+     * @apiPermission auth
+     *
+     * @apiDescription Digunakan untuk delete News.
+     *
+     * @apiExample Contoh untuk delete data News:
+     * http://localhost:8000/api/v1/news/1
+     * @apiParam {number} id id news yang ingin di delete
+     */
+
     public function getNews(Request $request)
     {
         $status = $request->query('status');
