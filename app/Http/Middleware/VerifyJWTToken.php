@@ -28,7 +28,7 @@ class VerifyJWTToken
             } else {
                 return response()->json([
                     'status' => 401,
-                    'msg' => 'Token is required'
+                    'msg' => 'You are not authorised to access this. Token is required'
                 ], 401);
             };
         };
